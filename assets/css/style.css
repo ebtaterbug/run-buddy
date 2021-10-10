@@ -43,7 +43,7 @@ body {
   }
 
   header nav ul li a {
-      padding: 10px 15px;
+      margin: 0 30px;
       font-weight: lighter;
       font-size: 1.55vw;
   }
@@ -77,15 +77,12 @@ body {
   }
 
   .hero {
-    position: relative;
-    height: 600px;
     background-size: cover;
     background-position: center;
     background-image: url("../images/hero-bg.jpg");
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
   }
 
   .hero-cta {
@@ -277,18 +274,17 @@ body {
 
   /* REACH OUT STYLES START */
   .contact {
-      
       background: #024e76;
   }
 
   .contact h2 {
-      color:#fce138
+      color:#fce138;
   }
 
   .contact-info {
       display: flex;
       justify-content: space-between;
-      flex: wrap;
+      flex-wrap: wrap;
   }
 
   .contact-info > * {
@@ -316,10 +312,6 @@ body {
       font-style: normal;
   }
 
-  .contact-info a {
-      color: #fce138;
-  }
-
   .contact-form input, .contact-form textarea {
       border: 1px solid #024e76;
       display: block;
@@ -341,6 +333,10 @@ body {
       font-size: 16px;
   }
 
+  .contact-info a {
+      color: #fce138;
+  }
+
   /* REACH OUT STYLES END */
 
   .flex-row {
@@ -350,24 +346,108 @@ body {
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
   @media screen and (max-width: 980px) {
-      header h1 a {
-          /* this will be applied on any screen smaller than 980px */
-          color: tomato;
+      header {
+          padding-bottom: 0;
+          justify-content: center;
+      }
+
+      header h1 {
+          width: 100%;
+          text-align: center;
+      }
+
+      header nav ul {
+          margin-top: 20px;
+          width: 100%;
+          justify-content: center;
+      }
+
+      header nav ul li a {
+          font-size: 20px;
+      }
+
+      footer h2, footer div {
+          text-align: center;
+          width: 100%;
+      }
+
+      .hero-cta, .hero-form {
+          width: 100%;
+      }
+
+      .hero-cta {
+          text-align: center;
+      }
+
+      .section-title {
+          width: 80%;
+      }
+
+      .trainer {
+          flex: 0 100%;
+      }
+
+      .contact-info iframe {
+          flex: 1 100%;
       }
   }
 
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
-      header h1 {
-          /* this will be applied on any screen between 768px and 575px */
-          font-size: 80px;
+      section {
+          padding: 30px 15px;
+      }
+
+      .step h3 {
+          flex: 1 100%;
+          text-align: center;
+      }
+
+      .step-info {
+          flex: 2 100%;
+          text-align: center;
+          justify-content: center;
+      }
+
+      .step-img {
+          flex: 0 32%;
+          margin-right: 0;
+          margin-top: 15px;
+          margin-bottom: 15px;
+      }
+
+      .step-text {
+          flex: 100%;
       }
   }
 
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
-      header h1 {
-        /* this will be applied on any screen smaller than 575px */
-        font-size: 100px;
+      .hero-form button {
+          width: 100%;
+      }
+
+      .section-title {
+          width: 95%;
+      }
+
+      .intro p {
+          width: 100%;
+      }
+
+      .trainer {
+          flex: 0 100%;
+      }
+
+      .contact-info {
+          text-align: center;
+      }
+
+      .contact-info > * {
+          flex: 0 100%;
+      }
+
+      .contact-form {
+          order: 3;
       }
   }
